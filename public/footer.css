@@ -1,0 +1,453 @@
+.play-footer {
+  margin-top: 75px;
+  margin-bottom: 0;
+}
+.footer-invite {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(120deg, #011c40, #023859 75%, #26658c);
+  color: #fff;
+  border: 1px solid #54acbf44;
+  border-radius: 27px;
+  overflow: hidden;
+  padding: 32px 44px 0;
+}
+.footer-invite-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+.footer-kicker {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  color: #b5dce7;
+}
+.footer-live {
+  font-size: 11px;
+  color: #a7ebf2;
+  border: 1px solid #54acbf66;
+  background: #a7ebf208;
+  padding: 8px 13px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+.footer-live:before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a7ebf2;
+  margin-right: 8px;
+}
+.footer-invite-main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 38px 0 45px;
+}
+.footer-invite h2 {
+  font-size: clamp(48px, 6.5vw, 88px);
+  font-weight: 500;
+  letter-spacing: -4.5px;
+  line-height: 1.02;
+  margin: 0;
+}
+.footer-invite h2 em {
+  font-style: normal;
+  color: #a7ebf2;
+}
+.footer-play-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #a7ebf2;
+  color: #011c40;
+  width: 146px;
+  height: 146px;
+  font-size: 12px;
+  transition:
+    transform 0.3s,
+    background 0.3s;
+  margin-right: 30px;
+}
+.footer-play-button img {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.3s;
+}
+.footer-play-button:hover {
+  background: #d6faff;
+  transform: rotate(-5deg);
+}
+.footer-play-button:hover img {
+  transform: translate(4px, -4px);
+}
+.footer-play-button span {
+  font-weight: 500;
+}
+.footer-pitch {
+  position: absolute;
+  z-index: 0;
+  width: 530px;
+  right: 90px;
+  top: 30px;
+  transform: rotate(-15deg);
+  opacity: 0.2;
+  pointer-events: none;
+}
+.footer-pitch svg {
+  width: 100%;
+  stroke: #a7ebf2;
+  stroke-width: 1;
+}
+.footer-pitch .footer-ball {
+  fill: #a7ebf2;
+  stroke: none;
+  animation: footer-dribble 7s ease-in-out infinite alternate;
+}
+.footer-sport-band {
+  border-top: 1px solid #a7ebf233;
+  overflow: hidden;
+  margin: 0 -44px;
+  position: relative;
+  background: #011c4022;
+}
+.footer-sport-band > div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: max-content;
+  padding: 17px 25px;
+  animation: footer-run 28s linear infinite;
+}
+.footer-sport-band span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #c2e8ef;
+  white-space: nowrap;
+}
+.footer-sport-band b {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  color: #54acbf;
+}
+.footer-invite:hover .footer-sport-band > div,
+.footer-invite:focus-within .footer-sport-band > div {
+  animation-play-state: paused;
+}
+.footer-directory {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 1fr;
+  gap: 70px;
+  padding: 45px 5px 38px;
+}
+.footer-story .footer-brand {
+  font-size: 26px;
+  color: var(--ink);
+}
+.footer-story > p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 15px 0 20px;
+}
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.footer-location img {
+  filter: var(--icon-filter);
+}
+.footer-column-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  color: var(--muted);
+  margin: 5px 0 16px;
+}
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: stretch;
+}
+.footer-navigation button {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 210px;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 0;
+  font-size: 13px;
+  text-align: left;
+  color: var(--ink);
+}
+.footer-navigation button span {
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+.footer-navigation button:hover {
+  color: var(--accent);
+}
+.footer-navigation button:hover span {
+  transform: translate(3px, -3px);
+}
+#footer-sports-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+#footer-sports-list button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 11px;
+  padding: 9px 13px;
+  border-radius: 30px;
+}
+#footer-sports-list button:hover {
+  background: var(--surface-tint);
+  border-color: #54acbf;
+}
+.footer-baseline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 22px 5px 30px;
+  border-top: 1px solid var(--line);
+  font-size: 9px;
+  color: var(--muted);
+}
+.footer-baseline-dot {
+  padding: 0 7px;
+}
+.footer-credits {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.footer-credits a {
+  text-underline-offset: 3px;
+  text-decoration-color: #54acbf88;
+}
+.footer-credits button {
+  border: 0;
+  background: none;
+  padding: 5px 0 5px 8px;
+  font-size: 10px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.footer-credits button:hover {
+  color: var(--accent);
+}
+.play-footer :focus-visible {
+  outline-color: #54acbf;
+}
+@keyframes footer-run {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes footer-dribble {
+  0% {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(-80px, -45px);
+  }
+  100% {
+    transform: translate(-140px, 35px);
+  }
+}
+@media (max-width: 1000px) {
+  .footer-directory {
+    gap: 35px;
+  }
+  .footer-baseline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-pitch {
+    right: 20px;
+    width: 440px;
+  }
+  .footer-play-button {
+    margin-right: 5px;
+    width: 120px;
+    height: 120px;
+  }
+  .footer-kicker {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+  .footer-live {
+    font-size: 10px;
+  }
+}
+@media (max-width: 650px) {
+  .play-footer {
+    margin-top: 48px;
+  }
+  .footer-invite {
+    padding: 25px 25px 0;
+    border-radius: 23px;
+  }
+  .footer-invite-top {
+    align-items: flex-start;
+    gap: 13px;
+    flex-direction: column;
+  }
+  .footer-kicker {
+    font-size: 8px;
+    letter-spacing: 1.25px;
+  }
+  .footer-live {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+  .footer-invite-main {
+    gap: 15px;
+    padding: 30px 0 35px;
+  }
+  .footer-invite h2 {
+    font-size: clamp(39px, 9vw, 55px);
+    letter-spacing: -2.3px;
+  }
+  .footer-play-button {
+    width: 82px;
+    height: 82px;
+    margin: 0;
+    gap: 4px;
+    font-size: 8px;
+  }
+  .footer-play-button img {
+    width: 27px;
+    height: 27px;
+  }
+  .footer-pitch {
+    width: 300px;
+    right: -70px;
+    top: 75px;
+  }
+  .footer-sport-band {
+    margin: 0 -25px;
+  }
+  .footer-sport-band > div {
+    gap: 24px;
+    padding: 14px 20px;
+  }
+  .footer-sport-band span {
+    font-size: 9px;
+    letter-spacing: 1.7px;
+  }
+  .footer-directory {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 25px;
+    padding: 30px 3px;
+  }
+  .footer-story {
+    grid-column: 1/-1;
+  }
+  .footer-story > p {
+    margin: 10px 0 14px;
+  }
+  .footer-story .footer-brand {
+    font-size: 25px;
+  }
+  .footer-navigation button {
+    font-size: 12px;
+  }
+  .footer-column-label {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+  .footer-location {
+    font-size: 10px;
+  }
+  #footer-sports-list {
+    gap: 6px;
+  }
+  #footer-sports-list button {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .footer-baseline {
+    font-size: 8px;
+    padding: 20px 3px 25px;
+    line-height: 1.8;
+  }
+  .footer-credits {
+    flex-wrap: wrap;
+    gap: 8px 15px;
+  }
+  .footer-credits button {
+    font-size: 9px;
+    padding-left: 0;
+  }
+  .footer-baseline-dot {
+    padding: 0 2px;
+  }
+}
+@media (max-width: 360px) {
+  .footer-invite {
+    padding: 22px 20px 0;
+  }
+  .footer-invite h2 {
+    font-size: 36px;
+    letter-spacing: -2px;
+  }
+  .footer-invite-main {
+    gap: 10px;
+  }
+  .footer-play-button {
+    width: 70px;
+    height: 70px;
+    font-size: 7px;
+  }
+  .footer-sport-band {
+    margin: 0 -20px;
+  }
+  .footer-kicker {
+    font-size: 7px;
+  }
+  .footer-directory {
+    gap: 24px 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-sport-band > div,
+  .footer-ball {
+    animation: none !important;
+  }
+  .footer-play-button,
+  .footer-play-button img {
+    transition: none;
+  }
+  .footer-play-button:hover {
+    transform: none;
+  }
+}

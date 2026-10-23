@@ -1,0 +1,10 @@
+Para entrar como administrador:
+- Correo: admin@canchafacil.local
+- Contraseña: busca el valor de ADMIN_PASSWORD en el archivo .env.
+Las cuentas de clientes están en .local/clientes-demo.json.
+Para los siguientes arranques
+
+
+Desde la carpeta del proyecto, ejecuta:
+npm run db:local:start
+npm start

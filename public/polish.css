@@ -1,0 +1,119 @@
+.field-error {
+  font-size: 11px;
+  color: var(--danger);
+  margin: 1px 0 0;
+  line-height: 1.6;
+}
+.form-feedback {
+  grid-column: 1/-1;
+  padding: 13px 16px;
+  border: 1px solid var(--danger);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.field-error,
+.form-feedback {
+  overflow-wrap: anywhere;
+}
+.dock-field:has(.field-error) {
+  flex-wrap: wrap;
+}
+.dock-field > .field-error {
+  flex-basis: 100%;
+}
+[aria-invalid="true"] {
+  border-color: var(--danger) !important;
+}
+.custom-select:has(select[aria-invalid="true"]) > .select-trigger {
+  border-color: var(--danger);
+}
+form[aria-busy="true"] button[type="submit"] {
+  cursor: progress;
+  opacity: 0.8;
+}
+button[data-pending="true"] {
+  cursor: progress;
+  opacity: 0.65;
+}
+.chat-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+.chat-day:before,
+.chat-day:after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+.chat-day time {
+  padding: 4px 11px;
+  border-radius: 20px;
+  background: var(--surface-soft);
+  white-space: nowrap;
+}
+.table-wrap {
+  overscroll-behavior-x: contain;
+}
+.table-wrap:focus-visible {
+  outline-color: #54acbf;
+}
+.table-wrap caption {
+  font-size: 11px;
+  text-align: left;
+  padding: 10px 15px;
+  color: var(--muted);
+  background: var(--surface-soft);
+}
+@media (max-width: 600px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  .dock-field input {
+    font-size: 12px;
+  }
+  .chat-search input {
+    font-size: 12px;
+  }
+  .table-wrap {
+    max-width: 100%;
+  }
+  .table-wrap th,
+  .table-wrap td {
+    padding: 12px;
+    font-size: 11px;
+  }
+  .table-wrap .btn {
+    min-height: 36px;
+  }
+  .field-error {
+    font-size: 12px;
+  }
+  .form-feedback {
+    font-size: 13px;
+  }
+  .chat-day {
+    margin: 13px 0;
+  }
+}
+@media (max-width: 360px) {
+  .nav-account .admin-menu summary {
+    font-size: 0;
+    padding: 8px;
+    gap: 0;
+  }
+  .nav-account .admin-menu summary .icon {
+    width: 14px;
+    height: 14px;
+  }
+}
